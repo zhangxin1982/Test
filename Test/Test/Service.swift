@@ -82,11 +82,10 @@ class LocalData {
         let time = TimeInterval(string)
         let date = NSDate(timeIntervalSince1970: time ?? 0)
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy-MM-d-日 HH:mm:ss"
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let timeString = dateformatter.string(from: date as Date)
         return timeString
     }
-    
     
     private static func  isNotfindChar(string: String) -> Bool {
         for char in string.utf8 {
